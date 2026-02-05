@@ -1,34 +1,60 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [noButtonScale, setNoButtonScale] = useState(1)
+  const [isAccepted, setIsAccepted] = useState(false)
+
+  const handleNoClick = () => {
+    setNoButtonScale((prev) => Math.max(prev - 0.1, 0.1))
+  }
+
+  if (isAccepted) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', textAlign: 'center', backgroundColor: '#fff5f5' }}>
+        <h1 style={{ fontSize: '3.5rem', color: '#e91e63', fontFamily: 'cursive' }}>Youppi! I love you more! ❤️</h1>
+        <img src="https://media.tenor.com/gU_PbByqnuEAAAAM/tkthao219-bubududu.gif" alt="Happy" style={{ borderRadius: '15px' }} />
+      </div>
+    )
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', gap: '30px', backgroundColor: '#fff5f5', fontFamily: 'sans-serif' }}>
+      <h1 style={{ color: '#d32f2f', fontSize: '2.5rem' }}>Will you be my Valentine? 🌹</h1>
+      <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+        <button
+          onClick={() => setIsAccepted(true)}
+          style={{
+            padding: '15px 30px',
+            fontSize: '1.5rem',
+            backgroundColor: '#4caf50',
+            color: 'white',
+            border: 'none',
+            borderRadius: '10px',
+            cursor: 'pointer',
+            transition: 'all 0.2s'
+          }}
+        >
+          Yes
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+        <button
+          onClick={handleNoClick}
+          style={{
+            padding: '15px 30px',
+            fontSize: '1.5rem',
+            backgroundColor: '#f44336',
+            color: 'white',
+            border: 'none',
+            borderRadius: '10px',
+            cursor: 'pointer',
+            transform: `scale(${noButtonScale})`,
+            transition: 'transform 0.2s ease'
+          }}
+        >
+          No
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
