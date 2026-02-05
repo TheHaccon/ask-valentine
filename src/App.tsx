@@ -30,7 +30,7 @@ export default function App() {
           style={{ width: '300px', marginTop: '20px', borderRadius: '15px' }}
         />
                 <img
-          src="public/téléchargement.gif"
+          src="public\téléchargement.gif"
           alt="Valentine GIF"
           style={{ width: '300px', marginTop: '20px', borderRadius: '15px' }}
         />
