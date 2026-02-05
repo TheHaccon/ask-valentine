@@ -25,12 +25,12 @@ export default function App() {
           Yippiiiii! I love you more! ❤️
         </h1>
         <img
-          src="./Love Reaction Gif.gif"
+          src="public\Love Reaction Gif.gif"
           alt="Valentine GIF"
           style={{ width: '300px', marginTop: '20px', borderRadius: '15px' }}
         />
                 <img
-          src="./téléchargement.gif"
+          src="public/téléchargement.gif"
           alt="Valentine GIF"
           style={{ width: '300px', marginTop: '20px', borderRadius: '15px' }}
         />
@@ -54,7 +54,7 @@ export default function App() {
         Hello pookie! I am here once to ask if you want to be my Valentine? 🌹
       </h1>
       <img
-        src="./valentines-day-gif-4.gif"
+        src="public\valentines-day-gif-4.gif"
         alt="Valentine GIF"
         style={{ width: '300px', marginTop: '20px', borderRadius: '15px' }}
       />
